@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Overview &mdash; Camera Tutorials  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pipeline Graph" href="pipeline_view.html" />
+    <link rel="prev" title="Basic Setup" href="setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Camera Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../depth_camera.html">Depth Camera</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">Basic Setup</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">API Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interface-nodes">Interface nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-program-structure">General Program Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simple-example-depth-preview">Simple Example: Depth Preview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pipeline_view.html">Pipeline Graph</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pi_camera.html">Pi Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics.html">Mathematics</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Camera Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../depth_camera.html">Depth Camera</a></li>
+      <li class="breadcrumb-item active">API Overview</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/tyro-apil/camera_tutorials/blob/main/source/depth_camera/workflow.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-overview">
+<h1>API Overview<a class="headerlink" href="#api-overview" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<img alt="../_images/api_overview.png" src="../_images/api_overview.png" />
+<p><em>Fig: API overview from official documentation</em></p>
+</section>
+<section id="interface-nodes">
+<h2>Interface nodes<a class="headerlink" href="#interface-nodes" title="Link to this heading"></a></h2>
+<p>There are two nodes that facilitate communication between device (OAK-D) and host (computer).
+One acts as input to device and other acts as output from device.</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://docs.luxonis.com/software/depthai-components/nodes/xlink_out/">XLinkOut</a></p></li>
+</ol>
+<blockquote>
+<div><p>This node acts as a output from device. It is used to get frames, NN output, etc.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><a class="reference external" href="https://docs.luxonis.com/software/depthai-components/nodes/xlink_in/">XLinkIn</a></p></li>
+</ol>
+<blockquote>
+<div><p>This node acts as a input to device. It can be used to send <a class="reference external" href="https://docs.luxonis.com/software/depthai-components/messages/camera_control/">CameraControl message</a> to control brightness,
+exposure, etc. of RGB sensor.</p>
+</div></blockquote>
+</section>
+<section id="general-program-structure">
+<h2>General Program Structure<a class="headerlink" href="#general-program-structure" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Create a pipeline</p></li>
+<li><p>Declare the necessary nodes like MonoCamera, ColorCamera, StereoDepth, XLinkOut, etc. in the pipeline</p></li>
+<li><p>Define the properties of nodes</p></li>
+<li><p>Link the nodes i.e. feed input of one node to output of other node</p></li>
+<li><p>Connect to device(OAK-D) and start pipeline using Context Manager (preferred way)</p></li>
+<li><p>Set device properties like IR Dot Projector Intensity</p></li>
+<li><p>Set Input/Output Queues from XLink nodes</p></li>
+<li><p>Loop infinitely</p></li>
+</ol>
+</section>
+<section id="simple-example-depth-preview">
+<span id="depth-preview-example"></span><h2>Simple Example: Depth Preview<a class="headerlink" href="#simple-example-depth-preview" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: https://docs.luxonis.com/software/depthai/examples/depth_preview/</span>
+
+<span class="c1">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">depthai</span> <span class="k">as</span> <span class="nn">dai</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Closer-in minimum depth, disparity range is doubled (from 95 to 190):</span>
+<span class="n">extended_disparity</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># Better accuracy for longer distance, fractional disparity 32-levels:</span>
+<span class="n">subpixel</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># Better handling for occlusions:</span>
+<span class="n">lr_check</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+
+<span class="c1">## 1. Create pipeline</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">dai</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">()</span>
+
+
+
+<span class="c1">## 2. Declare the necessary nodes</span>
+<span class="n">monoLeft</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">dai</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">MonoCamera</span><span class="p">)</span>
+<span class="n">monoRight</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">dai</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">MonoCamera</span><span class="p">)</span>
+<span class="n">depth</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">dai</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">StereoDepth</span><span class="p">)</span>
+<span class="n">xout</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">dai</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">XLinkOut</span><span class="p">)</span>
+
+<span class="n">xout</span><span class="o">.</span><span class="n">setStreamName</span><span class="p">(</span><span class="s2">&quot;disparity&quot;</span><span class="p">)</span>
+
+
+
+<span class="c1">## 3. Define the properties of nodes</span>
+<span class="n">monoLeft</span><span class="o">.</span><span class="n">setResolution</span><span class="p">(</span><span class="n">dai</span><span class="o">.</span><span class="n">MonoCameraProperties</span><span class="o">.</span><span class="n">SensorResolution</span><span class="o">.</span><span class="n">THE_400_P</span><span class="p">)</span>
+<span class="n">monoLeft</span><span class="o">.</span><span class="n">setCamera</span><span class="p">(</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">monoRight</span><span class="o">.</span><span class="n">setResolution</span><span class="p">(</span><span class="n">dai</span><span class="o">.</span><span class="n">MonoCameraProperties</span><span class="o">.</span><span class="n">SensorResolution</span><span class="o">.</span><span class="n">THE_400_P</span><span class="p">)</span>
+<span class="n">monoRight</span><span class="o">.</span><span class="n">setCamera</span><span class="p">(</span><span class="s2">&quot;right&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create a node that will produce the depth map (using disparity output as it&#39;s easier to visualize depth this way)</span>
+<span class="c1"># Options: MEDIAN_OFF, KERNEL_3x3, KERNEL_5x5, KERNEL_7x7 (default)</span>
+<span class="n">depth</span><span class="o">.</span><span class="n">initialConfig</span><span class="o">.</span><span class="n">setMedianFilter</span><span class="p">(</span><span class="n">dai</span><span class="o">.</span><span class="n">MedianFilter</span><span class="o">.</span><span class="n">KERNEL_7x7</span><span class="p">)</span>
+<span class="n">depth</span><span class="o">.</span><span class="n">setLeftRightCheck</span><span class="p">(</span><span class="n">lr_check</span><span class="p">)</span>
+<span class="n">depth</span><span class="o">.</span><span class="n">setExtendedDisparity</span><span class="p">(</span><span class="n">extended_disparity</span><span class="p">)</span>
+<span class="n">depth</span><span class="o">.</span><span class="n">setSubpixel</span><span class="p">(</span><span class="n">subpixel</span><span class="p">)</span>
+
+
+
+<span class="c1">## 4. Linking the nodes</span>
+<span class="n">monoLeft</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">depth</span><span class="o">.</span><span class="n">left</span><span class="p">)</span>
+<span class="n">monoRight</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">depth</span><span class="o">.</span><span class="n">right</span><span class="p">)</span>
+<span class="n">depth</span><span class="o">.</span><span class="n">disparity</span><span class="o">.</span><span class="n">link</span><span class="p">(</span><span class="n">xout</span><span class="o">.</span><span class="n">input</span><span class="p">)</span>
+
+
+
+<span class="c1">## 5. Connect to device(OAK-D) and start pipeline using Context Manager</span>
+<span class="k">with</span> <span class="n">dai</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="n">pipeline</span><span class="p">)</span> <span class="k">as</span> <span class="n">device</span><span class="p">:</span>
+
+
+
+  <span class="c1">## 6. Set device properties</span>
+  <span class="n">device</span><span class="o">.</span><span class="n">setIrLaserDotProjectorIntensity</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+
+
+
+  <span class="c1">## 7. Set Input/Output Queues from XLink nodes</span>
+
+  <span class="c1"># Output queue will be used to get the disparity frames from the outputs defined above</span>
+  <span class="c1"># Arguments: maxSize=Size of Queue; blocking=False: substitute messages in queue with newer messages</span>
+  <span class="n">q</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">getOutputQueue</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;disparity&quot;</span><span class="p">,</span> <span class="n">maxSize</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">blocking</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+
+
+  <span class="c1">## 8. Loop infinitely</span>
+  <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">inDisparity</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">tryGet</span><span class="p">()</span>  <span class="c1"># non-blocking call</span>
+
+    <span class="k">if</span> <span class="n">inDisparity</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+      <span class="k">continue</span>
+
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">inDisparity</span><span class="o">.</span><span class="n">getFrame</span><span class="p">()</span>
+
+
+    <span class="c1"># Normalization for better visualization</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="p">(</span><span class="n">frame</span> <span class="o">*</span> <span class="p">(</span><span class="mi">255</span> <span class="o">/</span> <span class="n">depth</span><span class="o">.</span><span class="n">initialConfig</span><span class="o">.</span><span class="n">getMaxDisparity</span><span class="p">()))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;disparity&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+
+    <span class="c1"># Available color maps: https://docs.opencv.org/3.4/d3/d50/group__imgproc__colormap.html</span>
+    <span class="n">frame</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">applyColorMap</span><span class="p">(</span><span class="n">frame</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLORMAP_JET</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;disparity_color&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;q&#39;</span><span class="p">):</span>
+      <span class="k">break</span>
+</pre></div>
+</div>
+<p>See the pipeline of above code with live FPS count of each input and output: <a class="reference internal" href="pipeline_view.html#pipeline-depth-preview"><span class="std std-ref">Live Pipeline View</span></a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setup.html" class="btn btn-neutral float-left" title="Basic Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pipeline_view.html" class="btn btn-neutral float-right" title="Pipeline Graph" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Apil Chaudhary.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

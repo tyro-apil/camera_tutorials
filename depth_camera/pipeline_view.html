@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pipeline Graph &mdash; Camera Tutorials  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pi Camera" href="../pi_camera.html" />
+    <link rel="prev" title="API Overview" href="workflow.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Camera Tutorials
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../depth_camera.html">Depth Camera</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="setup.html">Basic Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow.html">API Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pipeline Graph</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#live-pipeline-view">Live Pipeline View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#errors-faced">Errors Faced</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pi_camera.html">Pi Camera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mathematics.html">Mathematics</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Camera Tutorials</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../depth_camera.html">Depth Camera</a></li>
+      <li class="breadcrumb-item active">Pipeline Graph</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/tyro-apil/camera_tutorials/blob/main/source/depth_camera/pipeline_view.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pipeline-graph">
+<h1>Pipeline Graph<a class="headerlink" href="#pipeline-graph" title="Link to this heading"></a></h1>
+<p>There’s <a class="reference external" href="https://docs.luxonis.com/software/tools/pipeline-graph/">DepthAI Pipeline Graph</a> tool which helps in dynamic visualization of pipeline from script along
+with input/output FPS of nodes.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/luxonis/depthai_pipeline_graph.git
+
+<span class="c1"># pip install PySide2   # Error while launching Qt Window</span>
+pip<span class="w"> </span>install<span class="w"> </span>PyQt5
+</pre></div>
+</div>
+<p>It is developed using Qt framework. Upon using <strong>PySide2</strong> as mentioned in official documentation,
+I had error so I <strong>switched to PyQt5</strong> module.</p>
+</section>
+<section id="live-pipeline-view">
+<span id="pipeline-depth-preview"></span><h2>Live Pipeline View<a class="headerlink" href="#live-pipeline-view" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipeline_graph<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;python3 script.py&quot;</span>
+</pre></div>
+</div>
+<img alt="../_images/pipeline_depth_preview.png" src="../_images/pipeline_depth_preview.png" />
+</section>
+<section id="errors-faced">
+<h2>Errors Faced<a class="headerlink" href="#errors-faced" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>When trying to use variable names in graph, it did not work.</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipeline_graph<span class="w"> </span>run<span class="w"> </span><span class="s2">&quot;python3 script.py&quot;</span><span class="w"> </span>-var
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>When trying to view pipeline from a json schema, it did not open. See this forum to check if issue is resolved: <a class="reference external" href="https://discuss.luxonis.com/d/1447-how-to-view-pipeline-with-pipeline-editor">json_load_error_forum</a>.</p></li>
+</ol>
+<blockquote>
+<div><p>Saving pipeline schema to json:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># After declaring nodes, defining properties and linking nodes</span>
+
+<span class="n">pipeline</span><span class="o">.</span><span class="n">serializeToJson</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Viewing pipeline schema:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pipeline_graph<span class="w"> </span>load<span class="w"> </span>test.json
+</pre></div>
+</div>
+</div></blockquote>
+<p>See the code of depth preview example <a class="reference internal" href="workflow.html#depth-preview-example"><span class="std std-ref">Simple Example: Depth Preview</span></a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="workflow.html" class="btn btn-neutral float-left" title="API Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../pi_camera.html" class="btn btn-neutral float-right" title="Pi Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Apil Chaudhary.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
