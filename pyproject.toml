@@ -1,0 +1,16 @@
+[project]
+name = "Robot_Perception_Tutorials"
+version = "1.0.0"
+description = "It consists of topics on Image Processing, Photogrammetry, and Computer Vision focusing on Robotics."
+requires-python = ">=3.11"
+dependencies = [
+  "sphinx>=8.2.3",
+  "sphinx-rtd-theme>=3.0.2",
+  "sphinx-copybutton>=0.5.2",
+  "myst-parser>=4.0.1",
+  "sphinx-autobuild>=2025.08.25",
+  "sphinx-tabs>=3.4.7"
+]
+
+[project.optional-dependencies]
+dev = []
