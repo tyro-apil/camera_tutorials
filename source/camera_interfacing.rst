@@ -6,4 +6,4 @@ Camera Interfacing
   :caption: Devices:
   :hidden:
 
-  depth_camera
+  oak_camera
