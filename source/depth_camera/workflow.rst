@@ -23,7 +23,7 @@ One acts as input to device and other acts as output from device.
 
 
 General Program Structure
------------------
+----------------------------
 1. Create a pipeline
 2. Declare the necessary nodes like MonoCamera, ColorCamera, StereoDepth, XLinkOut, etc. in the pipeline
 3. Define the properties of nodes 
@@ -37,7 +37,7 @@ General Program Structure
 .. _depth_preview_example:
 
 Simple Example: Depth Preview
---------------
+-------------------------------
 
 .. code-block:: python
 
