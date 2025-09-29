@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Depth Camera" href="depth_camera.html" /> 
+    <link rel="next" title="Getting Started" href="getting_started.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,31 +46,18 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="depth_camera.html">Depth Camera</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="depth_camera/setup.html">Basic Setup</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#install-commands">Install Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#useful-packages">Useful Packages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#read-write-access-through-usb">Read/Write Access through USB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#debugging">Debugging</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="depth_camera/workflow.html">API Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#introduction">Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#interface-nodes">Interface nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#general-program-structure">General Program Structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#simple-example-depth-preview">Simple Example: Depth Preview</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="depth_camera/pipeline_view.html">Pipeline Graph</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/pipeline_view.html#installation">Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/pipeline_view.html#live-pipeline-view">Live Pipeline View</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/pipeline_view.html#errors-faced">Errors Faced</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="camera_interfacing.html">Camera Interfacing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="depth_camera.html">Depth Camera</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="depth_camera/setup.html">Basic Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="depth_camera/workflow.html">API Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="depth_camera/pipeline_view.html">Pipeline Graph</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pi_camera.html">Pi Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mathematics.html">Mathematics</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -97,51 +84,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
-<p>In Robotics Club Pulchowk, we have used <a class="reference external" href="https://docs.luxonis.com/hardware/products/OAK-D%20Pro%20W">OAK-D Pro W</a> Camera as a vision sensor for Automatic Robot of <a class="reference external" href="https://aburobocon2024.vtv.gov.vn/">ABU Robocon 2024</a>.
-We also used <a class="reference external" href="https://www.raspberrypi.com/products/camera-module-3/?variant=camera-module-3-wide">Pi Camera Module 3 Wide</a> interfaced with Raspberry Pi 4B with Raspian OS (through CSI Camera Port).</p>
-<img alt="_images/oakd_pro_w.webp" src="_images/oakd_pro_w.webp" />
-<p><em>Fig: OAK-D Pro W Camera</em></p>
-<img alt="_images/pi_cam_v3_wide.jpg" src="_images/pi_cam_v3_wide.jpg" />
-<p><em>Fig: Raspberry Pi Camera v3 Wide</em></p>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="depth_camera.html">Depth Camera</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="depth_camera/setup.html">Basic Setup</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#install-commands">Install Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#useful-packages">Useful Packages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#read-write-access-through-usb">Read/Write Access through USB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#debugging">Debugging</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="depth_camera/workflow.html">API Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#introduction">Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#interface-nodes">Interface nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#general-program-structure">General Program Structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#simple-example-depth-preview">Simple Example: Depth Preview</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="depth_camera/pipeline_view.html">Pipeline Graph</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/pipeline_view.html#installation">Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/pipeline_view.html#live-pipeline-view">Live Pipeline View</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/pipeline_view.html#errors-faced">Errors Faced</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="pi_camera.html">Pi Camera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mathematics.html">Mathematics</a></li>
-</ul>
+  <div class="toctree-wrapper compound">
 </div>
+<section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p>These tutorials will be focused on <strong>Robot Perception</strong> stack like Image Processing, Photogrammetry and Computer Vision being focused on applications in the field of robotics.
+A camera interfacing module would be included in “Getting Started” section to deal with specific devices like Depth cameras, Pi-cameras, USB cameras.
+Apart from that we will be focusing on problem specific algorithms and their implementations.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="depth_camera.html" class="btn btn-neutral float-right" title="Depth Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

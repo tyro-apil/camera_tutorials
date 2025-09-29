@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mathematics &mdash; Robot Perception Tutorials 2.0.0 documentation</title>
+  <title>Camera Interfacing &mdash; Robot Perception Tutorials 2.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -22,7 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Pi Camera" href="pi_camera.html" /> 
+    <link rel="next" title="Depth Camera" href="depth_camera.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,31 +47,18 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="depth_camera.html">Depth Camera</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="depth_camera/setup.html">Basic Setup</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#install-commands">Install Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#useful-packages">Useful Packages</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#read-write-access-through-usb">Read/Write Access through USB</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/setup.html#debugging">Debugging</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="depth_camera/workflow.html">API Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#introduction">Introduction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#interface-nodes">Interface nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#general-program-structure">General Program Structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/workflow.html#simple-example-depth-preview">Simple Example: Depth Preview</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="depth_camera/pipeline_view.html">Pipeline Graph</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/pipeline_view.html#installation">Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/pipeline_view.html#live-pipeline-view">Live Pipeline View</a></li>
-<li class="toctree-l3"><a class="reference internal" href="depth_camera/pipeline_view.html#errors-faced">Errors Faced</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Camera Interfacing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="depth_camera.html">Depth Camera</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="depth_camera/setup.html">Basic Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="depth_camera/workflow.html">API Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="depth_camera/pipeline_view.html">Pipeline Graph</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pi_camera.html">Pi Camera</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Mathematics</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -87,9 +75,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Mathematics</li>
+          <li class="breadcrumb-item"><a href="getting_started.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Camera Interfacing</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/tyro-apil/camera_tutorials/blob/main/source/mathematics.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/tyro-apil/camera_tutorials/blob/main/source/camera_interfacing.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -97,15 +86,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="mathematics">
-<h1>Mathematics<a class="headerlink" href="#mathematics" title="Link to this heading"></a></h1>
+  <section id="camera-interfacing">
+<h1>Camera Interfacing<a class="headerlink" href="#camera-interfacing" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pi_camera.html" class="btn btn-neutral float-left" title="Pi Camera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="depth_camera.html" class="btn btn-neutral float-right" title="Depth Camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
