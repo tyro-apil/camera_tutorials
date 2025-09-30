@@ -6,4 +6,5 @@ Camera Interfacing
   :caption: Devices:
   :hidden:
 
-  oak_camera
+  camera_interfacing/oak_camera.rst
+  camera_interfacing/pi_camera.rst

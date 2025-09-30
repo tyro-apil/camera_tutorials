@@ -3,7 +3,7 @@ API Overview
 
 Introduction
 -------------
-.. image:: ../images/api_overview.png
+.. image:: /_static/images/depthai/api_overview.png
 
 *Fig: API overview from official documentation*
 
