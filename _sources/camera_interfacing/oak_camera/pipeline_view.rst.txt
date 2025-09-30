@@ -27,7 +27,7 @@ Live Pipeline View
 
   pipeline_graph run "python3 script.py"
 
-.. image:: ../images/pipeline_depth_preview.png
+.. image:: /_static/images/depthai/pipeline_depth_preview.png
 
 
 Errors Faced
