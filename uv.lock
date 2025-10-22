@@ -387,6 +387,7 @@ dependencies = [
     { name = "sphinx-autobuild" },
     { name = "sphinx-copybutton" },
     { name = "sphinx-rtd-theme" },
+    { name = "sphinx-subfigure" },
     { name = "sphinx-tabs" },
 ]
 
@@ -397,6 +398,7 @@ requires-dist = [
     { name = "sphinx-autobuild", specifier = ">=2025.8.25" },
     { name = "sphinx-copybutton", specifier = ">=0.5.2" },
     { name = "sphinx-rtd-theme", specifier = ">=3.0.2" },
+    { name = "sphinx-subfigure", specifier = ">=0.2.4" },
     { name = "sphinx-tabs", specifier = ">=3.4.7" },
 ]
 provides-extras = ["dev"]
@@ -497,6 +499,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/91/44/c97faec644d29a5ceddd3020ae2edffa69e7d00054a8c7a6021e82f20335/sphinx_rtd_theme-3.0.2.tar.gz", hash = "sha256:b7457bc25dda723b20b086a670b9953c859eab60a2a03ee8eb2bb23e176e5f85", size = 7620463, upload-time = "2024-11-13T11:06:04.545Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/85/77/46e3bac77b82b4df5bb5b61f2de98637724f246b4966cfc34bc5895d852a/sphinx_rtd_theme-3.0.2-py2.py3-none-any.whl", hash = "sha256:422ccc750c3a3a311de4ae327e82affdaf59eb695ba4936538552f3b00f4ee13", size = 7655561, upload-time = "2024-11-13T11:06:02.094Z" },
+]
+
+[[package]]
+name = "sphinx-subfigure"
+version = "0.2.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "sphinx" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c7/b9/fbacae5a5439fc08b5403c9b6f3253ad2fb3af8dd3234e358be3fa3ab272/sphinx_subfigure-0.2.4.tar.gz", hash = "sha256:d106193d0076bf29bb9594dbda23d3c13e9b2490e4344bc8018b6059a195de3b", size = 576230, upload-time = "2022-09-28T07:54:30.246Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0d/4a/3dcdf5e9bbc05dce85ee154b1ec3507427a2c2332834bd4e5f0541626c3e/sphinx_subfigure-0.2.4-py3-none-any.whl", hash = "sha256:535c890e0c431e9d0ad635f96b91b311560b02300197accc1ec664cb28af44f3", size = 9152, upload-time = "2022-09-28T07:54:20.958Z" },
 ]
 
 [[package]]

@@ -26,7 +26,10 @@ extensions = [
     # "sphinx.ext.linkcode",
     "sphinx.ext.mathjax",
     "sphinx.ext.extlinks",
+    "sphinx_subfigure",
 ]
+
+numfig = False  # optional
 
 templates_path = ["_templates"]
 exclude_patterns = []
