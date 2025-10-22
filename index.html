@@ -86,13 +86,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="toctree-wrapper compound">
+  
+<style>
+  .ss-layout-default-A_B { grid-template-areas: 'A' 'B'; }
+</style>
+<div class="toctree-wrapper compound">
 </div>
 <section id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
 <p>These tutorials will be focused on <strong>Robot Perception</strong> stack like Image Processing, Photogrammetry and Computer Vision being focused on applications in the field of robotics.
 A camera interfacing section would be included to deal with specific devices like Depth cameras, Pi-cameras, USB cameras.
 Apart from that we will be focusing on problem specific algorithms and their implementations.</p>
+<p>The idea of <strong>Robot Perception</strong> revolves around the question of <strong>“What is Where?”</strong>.
+For example: You want to pickup a blue ball. So, at first you need to perceive your surrounding i.e.
+<strong>“What does surrounding look like?”</strong>” As per now, we can say surrouding consists of different colored balls.
+Then, we need to know the location of those balls in our real 3D world i.e. <strong>“Where are the balls located?”</strong>”
+The location is 3D coordinate with respect to a reference frame. Finally, we can complete our task to pickup a blue ball.</p>
+<figure class="sphinx-subfigure align-default" id="robot-perception-introduction">
+<div class="sphinx-subfigure-grid ss-layout-default-A_B outline" style="display: grid; gap: 8px; grid-gap: 8px;">
+<div class="sphinx-subfigure-area" style="display: flex; flex-direction: column; justify-content: center; align-items: center; grid-area: A;">
+<img alt="RGB image of surrounding" src="_images/obj_detection.jpg" />
+<span class="caption">RGB image of surrounding</span>
+</div>
+<div class="sphinx-subfigure-area" style="display: flex; flex-direction: column; justify-content: center; align-items: center; grid-area: B;">
+<img alt="Robot's understanding of its surrounding" src="_images/rviz_visualization.png" />
+<span class="caption">Robot&#x27;s understanding of its surrounding</span>
+</div>
+</div>
+<figcaption>
+<p><span class="caption-text">Robot Perception Introduction</span><a class="headerlink" href="#robot-perception-introduction" title="Link to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 
 
