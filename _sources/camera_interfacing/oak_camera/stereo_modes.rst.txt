@@ -63,7 +63,7 @@ Stereo-Depth Modes
       stereo = pipeline.create(dai.node.StereoDepth)
 
       # Better handling for occlusions:
-      stereo.setLeftRightCheck(False)
+      stereo.setLeftRightCheck(True)
 
 
 
