@@ -15,6 +15,7 @@ For using it with low-power (can't supply more than 1 Amps through USB) Single B
   oak_camera/setup.rst
   oak_camera/workflow.rst
   oak_camera/pipeline_view.rst
+  oak_camera/stereo_modes.rst
 
 .. _OAK-D PRO W: https://docs.luxonis.com/hardware/products/OAK-D%20Pro%20W
 .. _OAK Y Adapter: https://shop.luxonis.com/products/oak-y-adapter
