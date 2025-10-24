@@ -91,6 +91,49 @@
              
   <section id="setup">
 <h1>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h1>
+<section id="opencv-installation">
+<h2>OpenCV installation<a class="headerlink" href="#opencv-installation" title="Link to this heading"></a></h2>
+<p>We will be installing OpenCV package in Python.
+For using OpenCV with C++, see <a class="reference external" href="https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html">OpenCV Linux Install</a> and <a class="reference external" href="https://docs.opencv.org/master/db/df5/tutorial_linux_gcc_cmake.html">OpenCV with gcc and CMake</a>.
+There are 4 different opencv packages.</p>
+<p>For desktop environments (GUI support):</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>opencv-python</dt><dd><p>main modules package</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>opencv-contrib-python</dt><dd><p>main + extra modules (<a class="reference external" href="https://docs.opencv.org/master/">OpenCV Docs</a>)</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>For server setups (no GUI):</p>
+<ol class="arabic simple">
+<li><p>opencv-python-headless</p></li>
+<li><p>opencv-contrib-python-headless</p></li>
+</ol>
+<p>The most preferred version is <strong>opencv-python</strong> but if you need extra modules install the <strong>opencv-contrib-python</strong> package.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a virtual environment</span>
+python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+
+<span class="c1"># Activate environment (In Linux)</span>
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+
+<span class="c1"># Install OpenCV package (It has numpy as dependency so numpy will be installed automatically.)</span>
+pip3<span class="w"> </span>install<span class="w"> </span>opencv-python
+</pre></div>
+</div>
+</section>
+<section id="matlab">
+<h2>MATLAB<a class="headerlink" href="#matlab" title="Link to this heading"></a></h2>
+<p>Recommended toolbox:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.mathworks.com/products/image-processing.html">MATLAB Image Processing Toolbox</a></p></li>
+<li><p><a class="reference external" href="https://www.mathworks.com/products/computer-vision.html">MATLAB Computer Vision Toolbox</a></p></li>
+</ol>
+</section>
 </section>
 
 
